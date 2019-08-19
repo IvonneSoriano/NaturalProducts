@@ -13,6 +13,9 @@
             }
             .logo{
                 flex: 0 0 40%;
+                img{
+                    opacity: 0.5;
+                }
             }
 
             .menu {
@@ -68,6 +71,8 @@
 
                     .inetwork {
                         fill: @grey;
+                        height: 36px;
+                        width: 36px;
                     }
 
                     &:hover {
@@ -105,8 +110,8 @@
                 }
 
                 .menu {
-                    flex: 1;
-                    flex-direction: column;
+                   display: block;
+                   text-align: center;
                     &>div {
                         margin-right: 0;
                         flex:1;
