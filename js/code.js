@@ -57,10 +57,12 @@ function stickymenu() {
     {
       $('.toggle-img').attr("src","svg/menu.svg");
       $('nav').fadeOut(00);
+      $('body').removeClass('overlay-active');
     }
     else{
       $('.toggle-img').attr("src","svg/cancel.svg");
       $('nav').fadeIn(800);
+      $('body').addClass('overlay-active');
     }
     
      $('.site-header').toggleClass("overlay");
