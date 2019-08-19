@@ -325,7 +325,8 @@
         }
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 576px) {
+
         .slick {
             .product-card {
                 .info {
@@ -333,320 +334,329 @@
                         visibility: visible;
                     }
                 }
+
+                &:hover {
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+                .picture{
+                    max-width: none;
+                }
             }
         }
     }
 }
 
-// HERO SLIDER
-.hero {
-    background-image: url(../img/20907.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    .padding-mbl();
+    // HERO SLIDER
+    .hero {
+        background-image: url(../img/20907.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        .padding-mbl();
 
-    .float-text-father {
-        .father(80vh);
-
-        h2,
-        p {
-            color: #ffffff;
-        }
-
-        .float-text {
-            width: 45%;
-        }
-    }
-
-    .rectangle-green {
-        width: 20%;
-        height: 15%;
-        position: absolute;
-        right: 0;
-        background: @green;
-        bottom: -5%;
-    }
-
-
-    @media (max-width:1200px) {
         .float-text-father {
+            .father(80vh);
+
+            h2,
+            p {
+                color: #ffffff;
+            }
+
             .float-text {
-                width: 55%;
+                width: 45%;
             }
         }
 
         .rectangle-green {
-            width: 30%;
+            width: 20%;
+            height: 15%;
+            position: absolute;
+            right: 0;
+            background: @green;
+            bottom: -5%;
         }
-    }
 
-    @media (max-width:768px) {
-        .float-text-father {
-            .float-text {
-                width: 75%;
+
+        @media (max-width:1200px) {
+            .float-text-father {
+                .float-text {
+                    width: 55%;
+                }
+            }
+
+            .rectangle-green {
+                width: 30%;
             }
         }
 
-        .rectangle-green {
-            width: 50%;
-        }
-    }
+        @media (max-width:768px) {
+            .float-text-father {
+                .float-text {
+                    width: 75%;
+                }
+            }
 
-    @media (max-width:576px) {
-        background-position: 35%;
-        padding: 60px 20px;
-
-        .float-text-father {
-            .float-text {
-                width: 100%;
+            .rectangle-green {
+                width: 50%;
             }
         }
 
-        .rectangle-green {
-            height: 10%;
+        @media (max-width:576px) {
+            background-position: 35%;
+            padding: 60px 20px;
+
+            .float-text-father {
+                .float-text {
+                    width: 100%;
+                }
+            }
+
+            .rectangle-green {
+                height: 10%;
+            }
         }
     }
-}
 
-// ARTICLES
-.articles {
-    .padding-mbl();
+    // ARTICLES
+    .articles {
+        .padding-mbl();
 
-    .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 60px 0;
-
-        .article-card {
+        .container {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 calc(50% - 50px);
-            flex: 0 0 calc(50% - 50px);
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 60px 0;
 
-            // LE HACE FALTA QUITAR EL BORDER DEL ULTIMO UHIJO
-            &:last-of-type {
-                margin-right: 0;
-            }
-
-            .picture {
-                max-height: 400px;
-                overflow: hidden;
+            .article-card {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
                 -webkit-box-flex: 0;
-                -ms-flex: none;
-                flex: none;
-                max-width: 300px;
+                -ms-flex: 0 0 calc(50% - 50px);
+                flex: 0 0 calc(50% - 50px);
 
-                img {
-                    max-width: none;
-                    height: 400px;
+                // LE HACE FALTA QUITAR EL BORDER DEL ULTIMO UHIJO
+                &:last-of-type {
+                    margin-right: 0;
                 }
-            }
 
-            .info {
-                padding: 0 30px;
-            }
-        }
-    }
-
-    @media(max-width:1600px) {
-        .container {
-            .article-card {
                 .picture {
-                    max-width: 275px;
-                    max-height: 330px;
+                    max-height: 400px;
+                    overflow: hidden;
+                    -webkit-box-flex: 0;
+                    -ms-flex: none;
+                    flex: none;
+                    max-width: 300px;
+
+                    img {
+                        max-width: none;
+                        height: 400px;
+                    }
+                }
+
+                .info {
+                    padding: 0 30px;
                 }
             }
         }
-    }
 
-    @media(max-width:1200px) {
-        .container {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-
-        .article-card {
-            margin-bottom: 100px;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            max-width: 700px;
-
-            &:last-of-type {
-                margin-bottom: 0;
+        @media(max-width:1600px) {
+            .container {
+                .article-card {
+                    .picture {
+                        max-width: 275px;
+                        max-height: 330px;
+                    }
+                }
             }
-
-
         }
-    }
 
-    @media(max-width:576px) {
-        .container {
-
-            .article-card {
+        @media(max-width:1200px) {
+            .container {
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                 -ms-flex-direction: column;
                 flex-direction: column;
-                margin-bottom: 50px;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            .article-card {
+                margin-bottom: 100px;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                max-width: 700px;
 
                 &:last-of-type {
                     margin-bottom: 0;
                 }
 
-                .picture {
-                    margin-bottom: 2rem;
+
+            }
+        }
+
+        @media(max-width:576px) {
+            .container {
+
+                .article-card {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    margin-bottom: 50px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .picture {
+                        margin-bottom: 2rem;
+                    }
+
+                    .info {
+                        padding: 0;
+                        text-align: center;
+                    }
+
                 }
-
-                .info {
-                    padding: 0;
-                    text-align: center;
-                }
-
-            }
-        }
-    }
-}
-
-// NEWSLATTER
-.newsletter {
-    .padding-mbl();
-    background: @grey-soft;
-    min-height: 300px;
-    text-align: center;
-    padding: 100px 0;
-    position: relative;
-
-    .leaf {
-        position: absolute;
-        width: 200px;
-        bottom: -70px;
-        left: 10%;
-    }
-
-    .content {
-        background: #ffffff;
-        padding: 10px;
-        display: inline-block;
-        border-radius: 50px;
-        -webkit-box-shadow: -1px 1px 14px rgba(0, 0, 0, 0.1);
-        box-shadow: -1px 1px 14px rgba(0, 0, 0, 0.1);
-
-        input {
-            width: 700px;
-            border: none;
-            margin-left: 45px;
-
-            &::-webkit-input-placeholder {
-                /* Chrome/Opera/Safari */
-                color: @grey;
-            }
-
-            &::-moz-placeholder {
-                /* Firefox 19+ */
-                color: @grey;
-            }
-
-            &:-ms-input-placeholder {
-                /* IE 10+ */
-                color: @grey;
-            }
-
-            &:-moz-placeholder {
-                /* Firefox 18- */
-                color: @grey;
             }
         }
     }
 
-    @media(max-width:1200px) {
-        .content {
-            input {
-                width: 500px;
-            }
-        }
-    }
-
-    @media(max-width:992px) {
-        .content {
-            input {
-                width: 400px;
-            }
-        }
-    }
-
-    @media(max-width:768px) {
-        .content {
-            input {
-                width: 300px;
-            }
-        }
-    }
-
-    @media(max-width:600px) {
-        .content {
-            input {
-                width: auto;
-            }
-        }
+    // NEWSLATTER
+    .newsletter {
+        .padding-mbl();
+        background: @grey-soft;
+        min-height: 300px;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
 
         .leaf {
-            left: 0;
+            position: absolute;
+            width: 200px;
+            bottom: -70px;
+            left: 10%;
         }
-    }
 
-    @media(max-width:576px) {
         .content {
-            background: none;
-            box-shadow: none;
-            width: 100%;
-            padding: 0;
+            background: #ffffff;
+            padding: 8px;
+            display: inline-block;
+            border-radius: 50px;
+            -webkit-box-shadow: -1px 1px 14px rgba(0, 0, 0, 0.1);
+            box-shadow: -1px 1px 14px rgba(0, 0, 0, 0.1);
 
             input {
-                width: 100%;
-                display: block;
-                margin: 0;
-                margin-bottom: 2rem;
-                padding: 15px;
-                border-radius: 50px;
+                width: 700px;
+                border: none;
+                margin-left: 45px;
+
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
-                    text-align: center;
+                    color: @grey;
                 }
-    
+
                 &::-moz-placeholder {
                     /* Firefox 19+ */
-                    text-align: center;
+                    color: @grey;
                 }
-    
+
                 &:-ms-input-placeholder {
                     /* IE 10+ */
-                    text-align: center;
+                    color: @grey;
                 }
-    
+
                 &:-moz-placeholder {
                     /* Firefox 18- */
-                    text-align: center;
+                    color: @grey;
+                }
+            }
+        }
+
+        @media(max-width:1200px) {
+            .content {
+                input {
+                    width: 500px;
+                }
+            }
+        }
+
+        @media(max-width:992px) {
+            .content {
+                input {
+                    width: 400px;
+                }
+            }
+        }
+
+        @media(max-width:768px) {
+            .content {
+                input {
+                    width: 300px;
+                }
+            }
+        }
+
+        @media(max-width:600px) {
+            .content {
+                input {
+                    width: auto;
                 }
             }
 
-            button {
-                width: 100%;
+            .leaf {
+                left: 0;
             }
         }
+
+        @media(max-width:576px) {
+            .content {
+                background: none;
+                box-shadow: none;
+                width: 100%;
+                padding: 0;
+
+                input {
+                    width: 100%;
+                    display: block;
+                    margin: 0;
+                    margin-bottom: 2rem;
+                    padding: 15px;
+                    border-radius: 50px;
+
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        text-align: center;
+                    }
+
+                    &::-moz-placeholder {
+                        /* Firefox 19+ */
+                        text-align: center;
+                    }
+
+                    &:-ms-input-placeholder {
+                        /* IE 10+ */
+                        text-align: center;
+                    }
+
+                    &:-moz-placeholder {
+                        /* Firefox 18- */
+                        text-align: center;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+
     }
-
-
-}
