@@ -4,24 +4,39 @@
 
     .container {
         .content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
             justify-content: space-between;
             margin-bottom: 50px;
 
             &:last-of-type {
                 margin-bottom: 0;
             }
-            .logo{
+
+            .logo {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 40%;
                 flex: 0 0 40%;
-                img{
+
+                img {
                     opacity: 0.5;
                 }
             }
 
             .menu {
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
                 justify-content: space-between;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
                 align-items: flex-start;
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
                 flex: 1;
+
 
                 .title {
                     color: #000000;
@@ -37,7 +52,8 @@
                         color: @grey;
                         font-weight: 600;
                         text-transform: capitalize;
-                        &:hover{
+
+                        &:hover {
                             color: @green;
                             text-decoration: underline solid @green;
                         }
@@ -89,11 +105,16 @@
         .container {
             .content {
                 &:first-of-type {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
                     flex-direction: column;
                 }
 
                 .logo {
                     margin-bottom: 50px;
+                    -ms-flex-item-align: center;
+                    -ms-grid-row-align: center;
                     align-self: center;
                 }
             }
@@ -103,30 +124,40 @@
     @media(max-width: 576px) {
         .container {
             .content {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
-                &:last-of-type{
+
+                &:last-of-type {
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
                     align-items: center;
                     margin-top: 50px;
                 }
 
                 .menu {
-                   display: block;
-                   text-align: center;
+                    display: block;
+                    text-align: center;
+
                     &>div {
                         margin-right: 0;
-                        flex:1;
+                        -webkit-box-flex: 1;
+                        -ms-flex: 1;
+                        flex: 1;
                         margin-bottom: 25px;
                     }
                 }
             }
         }
     }
+
     @media(max-width: 400px) {
         .container {
             .content {
 
-                &:last-of-type{
-                    p{
+                &:last-of-type {
+                    p {
                         text-align: center;
                     }
                 }

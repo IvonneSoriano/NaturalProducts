@@ -20,6 +20,7 @@ a {
 p {
     color: @grey;
     margin-bottom: 2rem;
+
     @media (max-width:576px) {
         margin-bottom: 1rem;
     }
@@ -43,6 +44,7 @@ h1 {
     @media(max-width:768px) {
         font-size: 35px;
     }
+
     @media(max-width:576px) {
         font-size: 30px;
     }
@@ -58,6 +60,7 @@ h2 {
     @media(max-width:768px) {
         font-size: 30px;
     }
+
     @media(max-width:576px) {
         font-size: 26px;
     }
@@ -65,9 +68,11 @@ h2 {
 
 h3 {
     .heading(30px);
+
     @media(max-width:768px) {
         font-size: 26px;
     }
+
     @media(max-width:576px) {
         font-size: 22px;
     }
@@ -139,7 +144,8 @@ img {
 
 .margin-btm {
     margin-bottom: 125px;
-    @media(max-width: 576px){
+
+    @media(max-width: 576px) {
         margin-bottom: 60px;
     }
 }
@@ -152,11 +158,17 @@ img {
 }
 
 .scale15 {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
     transform: scale(1.5);
 }
 
 .father(@vh) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     min-height: @vh;
 }
@@ -185,6 +197,8 @@ img {
 }
 
 .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     li {
@@ -199,6 +213,8 @@ img {
 .logo {
     img {
         width: 200px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
         transition: all 0.5s;
     }
 
