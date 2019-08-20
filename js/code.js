@@ -61,7 +61,6 @@ function stickymenu() {
       $('.open').removeClass('disable');
     }
     else{
-      $('.toggle-img').attr("src","svg/cancel.svg");
       $('nav').fadeIn(800);
       $('.close').addClass('active');
       $('.open').addClass('disable');
