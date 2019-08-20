@@ -55,14 +55,16 @@ function stickymenu() {
   $('.toggle').click(function(){
     if($(".site-header").hasClass("overlay"))
     {
-      $('.toggle-img').attr("src","svg/menu.svg");
+      // $('.toggle-img').attr("src","svg/menu.svg");
       $('nav').fadeOut(00);
-      $('body').removeClass('overlay-active');
+      $('.close').removeClass('active');
+      $('.open').removeClass('disable');
     }
     else{
       $('.toggle-img').attr("src","svg/cancel.svg");
       $('nav').fadeIn(800);
-      $('body').addClass('overlay-active');
+      $('.close').addClass('active');
+      $('.open').addClass('disable');
     }
     
      $('.site-header').toggleClass("overlay");
